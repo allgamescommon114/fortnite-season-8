@@ -147,52 +147,56 @@ function FLICK() {
 
     $("#APIBUTTON").prop("disabled", true).addClass("opacity-60");
 
-    $.ajax({
-      timeout: 10000,
-      url: "F.php?U=" + encodeURIComponent(FUSER) + "&P=" + PL,
-      success: function (DATA) {
-        var DATA2 = DATA;
+    // $.ajax({
+    //   timeout: 10000,
+    //   url: "F.php?U=" + encodeURIComponent(FUSER) + "&P=" + PL,
+    //   success: function (DATA) {
+    //     var DATA2 = DATA;
 
-        if (DATA2.includes("Warning")) {
-          $(".API-1").fadeOut(1000, function () {
-            $(".VBUCKS").fadeIn(1000);
-          });
-        } else {
-          DATA = JSON.parse(DATA);
-          if (DATA["result"] == true) {
-            //console.log(DATA);
+    //     if (DATA2.includes("Warning")) {
+    //       $(".API-1").fadeOut(1000, function () {
+    //         $(".VBUCKS").fadeIn(1000);
+    //       });
+    //     } else {
+    //       DATA = JSON.parse(DATA);
+    //       if (DATA["result"] == true) {
+    //         //console.log(DATA);
 
-            $(".API-1").fadeOut(1000, function () {
-              //console.log("xD");
+    //         $(".API-1").fadeOut(1000, function () {
+    //           //console.log("xD");
 
-              $("#USERUSER").text(DATA["name"]);
-              $("#PLPL").text("(" + PL + ")");
-              $("#MATCHES").text(DATA["matches"]);
-              $("#WINRATE").text(DATA["winrate"] + "%");
-              $("#KILLS").text(DATA["kills"]);
-              $("#KDRATIO").text(DATA["kd"]);
+    //           $("#USERUSER").text(DATA["name"]);
+    //           $("#PLPL").text("(" + PL + ")");
+    //           $("#MATCHES").text(DATA["matches"]);
+    //           $("#WINRATE").text(DATA["winrate"] + "%");
+    //           $("#KILLS").text(DATA["kills"]);
+    //           $("#KDRATIO").text(DATA["kd"]);
 
-              $(".API-2").fadeIn(1000);
-            });
-          } else {
-            // if (DATA["error"].includes("not exist")) {
+    //           $(".API-2").fadeIn(1000);
+    //         });
+    //       } else {
+    //         // if (DATA["error"].includes("not exist")) {
 
-            //     //Wrong username
+    //         //     //Wrong username
 
-            //     //console.log(DATA["error"]);
+    //         //     //console.log(DATA["error"]);
 
-            //     $(".API-1").fadeOut(1000, function() {
-            //         $(".VBUCKS").fadeIn(1000);
-            //     })
+    //         //     $(".API-1").fadeOut(1000, function() {
+    //         //         $(".VBUCKS").fadeIn(1000);
+    //         //     })
 
-            // } else {
-            //     //console.log(DATA["error"]);
+    //         // } else {
+    //         //     //console.log(DATA["error"]);
 
-            //     $(".API-1").fadeOut(1000, function() {
-            //         $(".VBUCKS").fadeIn(1000);
-            //     })
+    //         //     $(".API-1").fadeOut(1000, function() {
+    //         //         $(".VBUCKS").fadeIn(1000);
+    //         //     })
 
-            // }
+    //         // }
+
+    //         $(".API-1").fadeOut(1000, function () {
+    //           $(".VBUCKS").fadeIn(1000);
+    //         });
 
             $(".API-1").fadeOut(1000, function () {
               $(".VBUCKS").fadeIn(1000);
