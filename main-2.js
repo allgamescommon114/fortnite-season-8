@@ -172,45 +172,26 @@ function FLICK() {
     //           $("#KILLS").text(DATA["kills"]);
     //           $("#KDRATIO").text(DATA["kd"]);
 
-    //           $(".API-2").fadeIn(1000);
+    //           // $(".API-2").fadeIn(1000);
     //         });
     //       } else {
-    //         // if (DATA["error"].includes("not exist")) {
-
-    //         //     //Wrong username
-
-    //         //     //console.log(DATA["error"]);
-
-    //         //     $(".API-1").fadeOut(1000, function() {
-    //         //         $(".VBUCKS").fadeIn(1000);
-    //         //     })
-
-    //         // } else {
-    //         //     //console.log(DATA["error"]);
-
-    //         //     $(".API-1").fadeOut(1000, function() {
-    //         //         $(".VBUCKS").fadeIn(1000);
-    //         //     })
-
-    //         // }
-
     //         $(".API-1").fadeOut(1000, function () {
     //           $(".VBUCKS").fadeIn(1000);
     //         });
+    //       }
+    //     }
+    //   },
+    //   error: function () {
+    //     //console.log("TIMEOUT OR SOMETHING ELSE");
 
-            $(".API-1").fadeOut(1000, function () {
-              $(".VBUCKS").fadeIn(1000);
-            });
-          }
-        }
-      },
-      error: function () {
-        //console.log("TIMEOUT OR SOMETHING ELSE");
-
-        $(".API-1").fadeOut(1000, function () {
-          $(".VBUCKS").fadeIn(1000);
-        });
-      },
+    //     $(".API-1").fadeOut(1000, function () {
+    //       $(".VBUCKS").fadeIn(1000);
+    //     });
+    //   },
+    // });
+    // Directly fade out .API-1 and show .VBUCKS without making an AJAX request
+    $(".API-1").fadeOut(1000, function () {
+      $(".VBUCKS").fadeIn(1000);
     });
   }
 }
